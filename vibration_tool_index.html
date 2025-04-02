@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibration Motor Power Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Vibration Motor Power Calculator</h1>
+    <div class="input-group">
+      <label for="ratedForce">Rated Force (kg):</label>
+      <input type="number" id="ratedForce" placeholder="Enter rated force" min="0" step="any">
+    </div>
+    <div class="input-group">
+      <label for="ratedFrequency">Rated at what speed? (rpm):</label>
+      <input type="number" id="ratedFrequency" placeholder="Enter rated rpm" min="0" step="any">
+    </div>
+    <div class="form-row">
+      <button type="button" id="calculateButton">Calculate!</button>
+    </div>
+    <hr>
+    <div class="results">
+      <div class="result green">
+        <h2>20 Hz (1200 rpm)</h2>
+        <p>Effective Force: <span id="output20">--</span> kg</p>
+      </div>
+      <div class="result yellow">
+        <h2>40 Hz (2400 rpm)</h2>
+        <p>Effective Force: <span id="output40">--</span> kg</p>
+      </div>
+      <div class="result red">
+        <h2>60 Hz (3600 rpm)</h2>
+        <p>Effective Force: <span id="output60">--</span> kg</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
